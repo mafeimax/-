@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stack>
-#define MAX 500
+#define MAX 500//输入的最大字节数，可根据需要直接修改
 
 using namespace std;
 
@@ -71,7 +71,7 @@ int namecmp(char* a, char* b) {
 	}
 
 	return 1;
-}
+}//比较字符串数组
 
 int opcmp(Token* TokenList, int op) {
 	int pr = 0;
@@ -82,7 +82,7 @@ int opcmp(Token* TokenList, int op) {
 	case 4: pr = 5; break;
 	}
 	return pr;
-}
+}//获取四则运算操作符优先级
 
 //接收输入，将输入存入数组
 int GetInput(char* input, char* file) {
@@ -119,7 +119,7 @@ int GetInput(char* input, char* file) {
 	return i;
 }
 
-//词法分析，生成TokenList
+//将输入分成单词
 int Scaner(char* input, int length, Token* TokenList) {
 	enum TokenType {
 		PLUS = 1, MINUS = 2, MULTI = 3, DIV = 4, LPAREN = 5, RPAREN = 6, INT = 7, FLOAT = 8, ARG = 9, CMD = 10, EAQLE = 11, END = 12
@@ -257,7 +257,7 @@ int Scaner(char* input, int length, Token* TokenList) {
 	return j;
 }
 
-//语法分析,分析成语句并创建变量表
+//将单词数组分成句子，并生成变量表
 int Reader(Token* TokenList, int length, Var* VarList, int* CMDList) {
 	int j = 0, k = 0;
 	int flag = 0;
