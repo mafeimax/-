@@ -4,7 +4,8 @@ READ ME
 -------------------------------------------------------------
 文档说明
 --------
-+calculater.cpp   源代码
-+calculater.exe   可执行文件
-+calculater.txt   输入样例
-+说明.docx        说明文档
+
+- calculater.cpp   源代码
+- calculater.exe   可执行文件
+- calculater.txt   输入样例
+- 说明.docx        说明文档
